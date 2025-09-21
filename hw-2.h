@@ -6,6 +6,9 @@
 #include <cmath>
 #include "date.h"
 
+/// <summary>
+/// Класс длины
+/// </summary>
 enum class Length {
 	DECIMETER = 1,
 	KILOMETER,
@@ -14,12 +17,35 @@ enum class Length {
 	CENTIMETER
 };
 
+/// <summary>
+/// Делает переход на следующую дату
+/// </summary>
+/// <param name=""></param>
+/// <param name=""></param>
+/// <param name=""></param>
 void nextData(int&, Month&, Day&);
 
+/// <summary>
+/// Конвертирует длину из Length в метры
+/// </summary>
+/// <param name=""></param>
+/// <param name=""></param>
+/// <returns></returns>
 double convertToMeters(Length, double);
 
-std::vector<int> fillVector(int);
+/// <summary>
+/// Заполняет вектор степенью двойку
+/// </summary>
+/// <param name=""></param>
+/// <returns></returns>
+std::vector<int> fillVectorPowTwo(int);
 
+/// <summary>
+/// Ищет первый и последний четный элемент в массиве
+/// </summary>
+/// <typeparam name="N"></typeparam>
+/// <param name="arr"></param>
+/// <returns></returns>
 template<int N>
 std::tuple<int, int> findFirstAndLastEven(std::array<int, N> arr)
 {
@@ -38,6 +64,11 @@ std::tuple<int, int> findFirstAndLastEven(std::array<int, N> arr)
 	return std::make_tuple(firstEven, lastEven);
 }
 
+/// <summary>
+/// Выводит элементы массив с нечетными номерами в порядке убывания номеров
+/// </summary>
+/// <typeparam name="N"></typeparam>
+/// <param name="A"></param>
 template<int N>
 void printOddIndicesDescending(const std::array<int, N>& A)
 {
@@ -46,6 +77,13 @@ void printOddIndicesDescending(const std::array<int, N>& A)
 	std::cout << std::endl;
 }
 
+/// <summary>
+/// Заполняет вектор при выполнение условия A[i] && B[i] > 0
+/// </summary>
+/// <typeparam name="N"></typeparam>
+/// <param name="A"></param>
+/// <param name="B"></param>
+/// <returns></returns>
 template<int N>
 std::vector<int> fillNewVector(const std::array<int, N>& A, const std::array<int, N> B)
 {
@@ -59,6 +97,11 @@ std::vector<int> fillNewVector(const std::array<int, N>& A, const std::array<int
 	return v;
 }
 
+/// <summary>
+/// Меняет половины массива местами
+/// </summary>
+/// <typeparam name="N"></typeparam>
+/// <param name="arr"></param>
 template<int N>
 void SwapArrayHalfs(std::array<int, N>& arr)
 {
@@ -78,4 +121,7 @@ void SwapArrayHalfs(std::array<int, N>& arr)
 //	std::rotate(arr.begin(), arr.begin() + N / 2, arr.end());
 //}
 
+/// <summary>
+/// Удаляет элемент по заданному индексу в векторе
+/// </summary>
 void removeElemAtIndex(std::vector<int>&, int);

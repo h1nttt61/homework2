@@ -43,7 +43,7 @@ int main()
 		int N;
 		std::cin >> N;
 
-		auto v = fillVector(N);
+		auto v = fillVectorPowTwo(N);
 		std::cout << "Полученный вектор" << std::endl;
 		for (auto i : v)
 			std::cout << i << " ";

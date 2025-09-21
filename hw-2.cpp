@@ -43,7 +43,7 @@ double convertToMeters(Length u, double len)
 	}
 }
 
-std::vector<int> fillVector(int N)
+std::vector<int> fillVectorPowTwo(int N)
 {
 	std::vector<int> v(N);
 	auto pow = 1;
